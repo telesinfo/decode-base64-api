@@ -5,8 +5,8 @@ WORKDIR /app
 # Instala o Poetry
 RUN pip install poetry
 
-# Copia os arquivos de configuração do Poetry
-COPY pyproject.toml poetry.lock* ./
+# Copia os arquivos de configuração do Poetry e README
+COPY pyproject.toml poetry.lock* README.md ./
 
 # Configura o Poetry para não criar um ambiente virtual
 RUN poetry config virtualenvs.create false
