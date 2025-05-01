@@ -15,12 +15,13 @@ COPY pyproject.toml poetry.lock* README.md ./
 # Configura o Poetry para não criar um ambiente virtual
 RUN poetry config virtualenvs.create false
 
-# Instala apenas as dependências de produção
-RUN poetry install --only main --no-interaction --no-ansi
-
-# Copia o código da aplicação e o arquivo .env
+# Copia o código da aplicação
+COPY src ./src
 COPY app ./app
 COPY .env ./.env
+
+# Instala apenas as dependências de produção
+RUN poetry install --only main --no-interaction --no-ansi
 
 # Expõe a porta 8008
 EXPOSE 8008
