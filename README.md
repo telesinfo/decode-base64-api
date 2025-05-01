@@ -6,7 +6,7 @@ API para decodificar arquivos base64 em diferentes formatos.
 
 - Python 3.9+
 - Poetry
-- Docker (opcional)
+- Docker e Docker Compose (opcional)
 
 ## Configuração
 
@@ -58,14 +58,28 @@ poetry run task format
 
 ## Execução com Docker
 
+### Usando Docker Compose (Recomendado)
+
 1. Certifique-se de que o arquivo `.env` está presente na raiz do projeto
 
-2. Construa a imagem:
+2. Execute a aplicação:
+```bash
+docker-compose up -d
+```
+
+3. Para parar a aplicação:
+```bash
+docker-compose down
+```
+
+### Usando Docker diretamente
+
+1. Construa a imagem:
 ```bash
 docker build -t decode-base64-api .
 ```
 
-3. Execute o container:
+2. Execute o container:
 ```bash
 docker run -p 8008:8008 decode-base64-api
 ```
