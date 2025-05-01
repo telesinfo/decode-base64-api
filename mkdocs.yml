@@ -1,5 +1,16 @@
-site_name: Market Imovel - Decode base64
+site_name: Teles Company Brasil - Decode base64
+repo_url: https://github.com/telesinfo/decode-base64-api
+repo_name: telesinfo/decode-base64-api
+edit_uri: tree/main.docs
 
 theme:
   name: material
   language: pt-BR
+  logo: assets/teles-company-logo-without-bk.png
+  favicon: assets/teles-company-logo-without-bk.png
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css

@@ -27,6 +27,35 @@ poetry install
 poetry run uvicorn app.main:app --host 0.0.0.0 --port 8008 --reload
 ```
 
+## Padrões de Código
+
+Este projeto segue rigorosos padrões de código e formatação:
+
+### Formatação
+
+- **PEP 8**: Seguimos as diretrizes do PEP 8 para estilo de código Python
+- **Blue**: Formatador de código baseado no Black, com configurações específicas
+- **isort**: Organização automática de imports
+- **EditorConfig**: Configurações consistentes entre diferentes editores
+
+### Comandos de Formatação
+
+```bash
+# Verificar formatação
+poetry run task lint
+
+# Aplicar formatação automaticamente
+poetry run task format
+```
+
+### Configurações
+
+- Comprimento máximo de linha: 79 caracteres
+- Indentação: 4 espaços
+- Ordenação de imports: Compatível com Black
+- Encoding: UTF-8
+- Final de linha: LF (Unix-style)
+
 ## Execução com Docker
 
 1. Certifique-se de que o arquivo `.env` está presente na raiz do projeto
