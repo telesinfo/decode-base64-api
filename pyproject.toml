@@ -1,11 +1,10 @@
-[project]
+[tool.poetry]
 name = "decode-base64-api"
-version = "0.1.0"
-description = ""
-authors = [
-    {name = "telesinfo",email = "telesinfo@telesinfo.com.br"}
-]
+version = "1.0.0"
+description = "API para decodificar arquivos base64 em diferentes formatos"
+authors = ["telesinfo <telesinfo@telesinfo.com.br>"]
 readme = "README.md"
+packages = [{include = "decode_base64_api", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -13,9 +12,6 @@ fastapi = "^0.115.12"
 uvicorn = "^0.27.0"
 python-multipart = "^0.0.6"
 python-dotenv = "^1.0.0"
-
-[tool.poetry]
-packages = [{include = "decode_base64_api", from = "src"}]
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
@@ -25,7 +21,6 @@ isort = "^6.0.1"
 taskipy = "^1.14.1"
 bump-pydantic = "^0.8.0"
 httpx = "^0.28.1"
-
 
 [tool.poetry.group.doc.dependencies]
 mkdocs-material = "^9.6.12"
