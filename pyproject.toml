@@ -65,3 +65,4 @@ docs = "mkdocs serve"
 pre_test = "task lint"
 test = "pytest -s -x --cov=app -vv"
 post_test = "coverage html"
+
