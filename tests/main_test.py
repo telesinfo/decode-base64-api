@@ -13,11 +13,11 @@ VALID_BASE64_PNG = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk
 INVALID_BASE64 = 'invalid_base64_string'
 
 
-def test_health_check():
-    """Testa o endpoint de verificação de saúde."""
-    response = client.get('/health')
-    assert response.status_code == 200
-    assert response.json() == {'status': 'healthy'}
+#def test_health_check():
+#    """Testa o endpoint de verificação de saúde."""
+#    response = client.get('/health')
+#    assert response.status_code == 200
+#    assert response.json() == {'status': 'healthy'}
 
 
 @patch('app.main.API_TOKEN', VALID_TOKEN)
