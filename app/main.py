@@ -11,9 +11,10 @@ from pydantic import BaseModel, ConfigDict
 # Carrega as variáveis de ambiente se não estiver em ambiente de teste
 if not os.environ.get('API_TOKEN'):
     load_dotenv()
-    API_TOKEN = os.getenv('API_TOKEN')
-    if not API_TOKEN:
-        raise ValueError('API_TOKEN não encontrado no arquivo .env')
+
+API_TOKEN = os.getenv('API_TOKEN')
+if not API_TOKEN:
+    raise ValueError('API_TOKEN não encontrado no arquivo .env')
 else:
     API_TOKEN = os.environ.get('API_TOKEN')
 
@@ -81,6 +82,6 @@ async def decode_base64(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get('/health')
-async def health_check():
-    return {'status': 'healthy'}
+# @app.get('/health')
+#async def health_check():
+#    return {'status': 'healthy'}
